@@ -139,6 +139,7 @@ nav{
 #about-me{
     display: flex;
     flex-direction: column;
+    background-color: #1BE2DB;
 }
 
 #home{
