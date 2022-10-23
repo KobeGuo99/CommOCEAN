@@ -105,10 +105,10 @@ nav{
 }
 
 .personal__logo{
-    font-size: 24px;
+    font-size: 30px;
     color: #6030b1;
     margin: 0 12px;
-    font-weight: bold;
+    font-weight: 1000;
 }
 
 .nav__link--list{
@@ -136,10 +136,10 @@ nav{
 
 /* ABOUT ME */
 
-#about-me{
+#nav{
     display: flex;
     flex-direction: column;
-    background-color: #1BE2DB;
+    background-color: #48E4B3;
 }
 
 #home{
@@ -149,8 +149,8 @@ nav{
 }
 
 .home__statement--para{
-    font-size: 20px;
-    margin-bottom: 28px;
+    font-size: 30px;   
+    font-weight: 600; 
 }
 
 .home__wrapper{
@@ -158,7 +158,6 @@ nav{
     max-width: 1280px;
     width: 100%;
     margin: 0 auto;
-    
 }
 
 .turtle__img--wrapper{
@@ -175,8 +174,14 @@ nav{
     width: 40%;
 }
 
+
+/* List of Charities*/
 #charities{
     background-color: #157EB2;
+}
+
+.charity-list{
+    padding-right: 20px;;
 }
 
 .charity__link{
@@ -186,175 +191,13 @@ nav{
 .charity__wrapper{
     width: 100%;
     display: flex;
+    justify-content: center;
     padding: 0;
 }
 
 .charity--turtle__img{
-    width: 50%;
-}
-
-
-/* animates profile picture */
-@keyframes animate-profile-picture{
-    0%{
-        transform: scale(0);
-    }
-
-    80%{
-        transform: scale(1.1);
-    }
-
-    100%{
-        transform: scale(1);
-    }
-}
-
-.wave{
-    display: inline-block;
-    animation: animate-wave 500ms infinite ease;
-}
-
-@keyframes animate-wave{
-    0%{
-        transform: rotate(0);
-    }
-    50%{
-        transform: rotate(30deg);
-    }
-    100%{
-        transform: rotate(0);
-    }
-}
-
-
-/* makes the hover animation for the icons */
-.language:hover .language__img{
-    filter: brightness(80%);
-    opacity: 0.86;
-    transform: scale(0.9);
-}
-
-.language{
-    width: calc(100%/3);
-    display: flex;
-    justify-content: center;
-    position: relative;
-}
-
-.language__img--wrapper{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 25px 16px;
-}
-
-.language__list{
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-
-.language__name{
-    position: absolute;
-    bottom: 0;
-    transform: scale(0);
-    transition: all 300ms;
-    font-size: 20px;
-    opacity: 0;
-}
-
-.language:hover .language__name{
-    transform: scale(1);
-    opacity: 1;
-}
-
-
-/* PROJECTS */
-
-.project{
-    margin-bottom: 135px;
-}
-
-.project:last-child{
-    margin-bottom: 40px;
-}
-
-.project__img{
-    width: 100%;
-    transition: all 500ms ease;
-}
-
-.project__wrapper{
-    display: flex;
-    box-shadow: 0 20px 80px rgba(0, 0, 0, 0.45);
-    border-radius: 20px;
-    overflow: hidden;
-    position: relative;
-}
-
-.project__wrapper:before{
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    background-color: #1c1d25;
-    opacity: 0;
-    transition: opacity 450ms ease;
-    z-index: 2;
-}
-
-.project:hover .project__wrapper:before{
-    opacity: 0.7;
-}
-
-.project:hover .project__img{
-    transform: scale(1.07);
-    filter: blur(5px);
-}
-
-.project:hover .project__description{
-    opacity: 1;
-    transform: translateY(-50%);
-}
-
-.project__list{
-    padding-top: 40px;
-}
-
-.project__description{
-    position: absolute;
-    top: 50%;
-    left: 90px;
-    transform: translateY(100%);
-    max-width: 550px;
-    z-index: 3;
-    opacity: 0;
-    transition: transform 450ms, opacity 300ms;
-}
-
-.project__description--title{
-    font-size: 40px;
-}
-
-.project__description--para{
-    margin: 16px 0;
-}
-
-.project__description--link{
-    font-size: 20px;
-    margin-right: 16px;
-    
-}
-
-.project__description--title,
-.project__description--sub-title,
-.project__description--para,
-.project__description--link{
-    text-align: left;
-    color: #fff;
-
+    width: 60%;
+    margin-left: 50px;
 }
 
 /* FOOTER */
@@ -421,51 +264,12 @@ footer{
     .about-me__info--para{
         font-size: 18px;
     }
-
-    .language{
-        width: calc(100%/2);
-    }
-
-    .project__description--para{
-        font-size: 14px;
-    }
-
-    .project__description{
-        left: 30px;
-        padding-right: 30px;
-    }
 }
 
 /* small phones */
 @media (max-width: 480px){
     .nav__link:not(:last-child){
         display:none;
-    }
-
-    .project__description{
-        padding: 0;
-        left: 0;
-        width: 100%;
-    }
-
-    .project__description--para{
-        display: none;
-    }
-
-    .project__description--links{
-        display: flex;
-        justify-content: center;
-    }
-
-    .project__description--title{
-        font-size: 32px;
-        line-height: 1;
-        text-align: center;
-    }
-
-    .project__description--sub-title{
-        text-align: center;
-        margin: 12px 0;
     }
 }
 
