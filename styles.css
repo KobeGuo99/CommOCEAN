@@ -174,12 +174,22 @@ nav{
     width: 40%;
 }
 
+#charities{
+    background-color: #157EB2;
+}
+
 .charity__link{
     padding-top: 16px;
 }
 
 .charity__wrapper{
+    width: 100%;
     display: flex;
+    padding: 0;
+}
+
+.charity--turtle__img{
+    width: 50%;
 }
 
 
